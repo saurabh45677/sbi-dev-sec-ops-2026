@@ -18,7 +18,7 @@ public class App {
     private static final Logger log = LoggerFactory.getLogger(App.class);
 
     public static void main(String[] args) {
-        log.info("Starting SBI Employee Management System...");
+        log.info("Starting SBI Employee Management System....");
         SpringApplication.run(App.class, args);
         log.info("SBI EMS started. Navigate to /swagger-ui.html");
     }
