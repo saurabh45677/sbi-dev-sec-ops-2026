@@ -60,7 +60,7 @@ public class AuthController {
 
     @PostMapping("/login")
     @Operation(summary = "Authenticate and receive a JWT token",
-               description = "Send username and password as JSON body. Returns a Bearer token.")
+               description = "Send username and password as JSON body. Returns a Bearer tokenss.")
     public ResponseEntity<TokenResponse> login(@Valid @RequestBody LoginRequest request) {
 
         // Spring Security verifies credentials against UserDetailsService

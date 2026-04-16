@@ -25,7 +25,7 @@
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # ── Stage 1: Build (Maven + JDK — used only at build time) ───────────────────
-FROM eclipse-temurin:21-jdk-alpine AS build
+FROM maven:3.9-eclipse-temurin-21-alpine AS build
 
 LABEL stage="builder"
 
@@ -74,7 +74,7 @@ EXPOSE 8080
 
 # DevSecOps: Health check — Docker and Kubernetes use this to determine
 # whether the container is healthy before routing traffic to it.
-HEALTHCHECK --interval=30s \
+HEALTHCHECK --interval=40s \
             --timeout=10s \
             --start-period=60s \
             --retries=3 \
